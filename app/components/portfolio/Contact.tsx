@@ -83,7 +83,7 @@ export default function Contact() {
             <div className="bg-white dark:bg-gray-800 rounded-2xl px-8 py-6">
               <p className="text-lg text-gray-700 dark:text-gray-300">
                 <span className="text-2xl mr-2">💬</span>
-                새로운 기회와 협업에 열려있습니다!
+                새로운 기회를 기다리고 있습니다.
               </p>
             </div>
           </div>
