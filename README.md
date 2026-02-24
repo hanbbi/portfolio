@@ -1,6 +1,5 @@
 # 유한비 | 포트폴리오 웹사이트
-
-> 3년차 웹 개발자 유한비의 포트폴리오입니다.
+URL: https://portfolio-yhb.vercel.app
 
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
@@ -75,8 +74,6 @@ NEXT_PUBLIC_WEATHER_API_KEY=your_openweathermap_api_key
 ```bash
 npm run dev
 ```
-
-http://localhost:3000 에서 확인
 
 ## 📝 배운 점
 
