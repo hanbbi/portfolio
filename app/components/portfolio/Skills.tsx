@@ -16,7 +16,7 @@ const skillData: SkillCategory[] = [
       { name: 'Java', level: 3, description: 'Spring Boot' },
       { name: 'MySQL', level: 3, description: '쿼리 최적화, 설계' },
       { name: 'MyBatis / JPA', level: 2 },
-      { name: 'Next.js', level: 1, description: 'API Routes 학습 중' },
+      { name: 'Next.js', level: 1, description: 'Claude Code 활용하여 학습 중' },
     ],
   },
   {
@@ -25,8 +25,8 @@ const skillData: SkillCategory[] = [
     skills: [
       { name: 'HTML / CSS', level: 3, description: '반응형, 크로스 브라우징' },
       { name: 'JavaScript', level: 3, description: 'ES6+, 비동기 처리' },
-      { name: 'React', level: 1, description: '개인 프로젝트 진행 중' },
-      { name: 'TypeScript', level: 1, description: '학습 중' },
+      { name: 'React', level: 1, description: 'Claude Code 활용하여 학습 중' },
+      { name: 'TypeScript', level: 1, description: 'Claude Code 활용하여 학습 중' },
     ],
   },
   {

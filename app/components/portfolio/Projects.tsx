@@ -21,11 +21,11 @@ const projects: Project[] = [
     period: '2026.01 ~ 진행중',
     role: '프로토타입 개발 (1인)',
     description: 'AI를 활용한 LPG 배송 주기 예측 시스템. IoT 센서 데이터와 기온/계절/휴일 변수를 반영한 Gradient Boosting 모델로 다음 충전 시점을 예측합니다.',
-    techs: ['Next.js', 'TypeScript', 'React', 'Flask', 'scikit-learn', 'MySQL'],
+    techs: ['Claude Code', 'Next.js', 'TypeScript', 'React', 'Flask', 'scikit-learn'],
     highlights: [
       '±3일 정확도 98.5% 달성',
       '이상 데이터 자동 필터링 구현',
-      '예측 검증 리포트 생성 기능',
+      '회사 내 첫 AI 시스템 도입',
     ],
     color: 'from-blue-500 to-cyan-500',
     emoji: '🤖',
@@ -36,9 +36,9 @@ const projects: Project[] = [
     period: '2024.06 ~ 2024.07',
     role: 'iOS 개발 전담 (1인)',
     description: '기존 웹뷰 서비스를 iOS 앱으로 출시. Swift를 처음 배우면서 2개월 만에 App Store 출시까지 완료했습니다.',
-    techs: ['Swift', 'Xcode', 'WKWebView', 'AVFoundation', 'Vision'],
+    techs: ['Swift', 'Xcode', 'WKWebView', 'AVFoundation'],
     highlights: [
-      'App Store 심사 통과',
+      '회사 첫 iOS 앱 출시',
       '바코드/QR 스캔 네이티브 구현',
       'JavaScript Bridge 양방향 통신',
     ],
@@ -55,7 +55,7 @@ const projects: Project[] = [
     highlights: [
       '환경설정 페이지 사용률 증가',
       '기능 찾기 문의 80% 감소',
-      '예정보다 5일 빠른 완료',
+      '예정보다 빠른 완료로 꼼꼼한 검수',
     ],
     color: 'from-purple-500 to-pink-500',
     emoji: '✨',
@@ -84,7 +84,7 @@ const projects: Project[] = [
     techs: ['Java', 'Spring Boot', 'JavaScript', 'MySQL'],
     highlights: [
       '100+ 기능 개발, 50+ 버그 수정',
-      '카카오 알림톡, 팩스 전송 시스템',
+      '카카오 알림톡, 팩스 전송 시스템 등 외부 API 활용',
       'SQL Injection 취약점 발견 및 보안 강화',
     ],
     color: 'from-orange-500 to-red-500',
