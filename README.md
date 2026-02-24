@@ -1,8 +1,6 @@
 # 유한비 | 포트폴리오 웹사이트
 URL: https://portfolio-yhb.vercel.app
 
-> 3년차 웹 개발자 유한비의 포트폴리오입니다.
-
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)
