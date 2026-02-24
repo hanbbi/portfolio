@@ -1,30 +1,32 @@
 'use client'
 
-import { useState, useEffect } from 'react';
+import { useCallback, useSyncExternalStore } from 'react';
+
+function getThemeSnapshot(): boolean {
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  return saved === 'dark' || (!saved && prefersDark);
+}
+
+function getServerSnapshot(): boolean | undefined {
+  return undefined;
+}
+
+function subscribeToTheme(callback: () => void): () => void {
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  mediaQuery.addEventListener('change', callback);
+  window.addEventListener('storage', callback);
+  return () => {
+    mediaQuery.removeEventListener('change', callback);
+    window.removeEventListener('storage', callback);
+  };
+}
 
 export default function DarkModeButton() {
-  const [isDark, setIsDark] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const isDark = useSyncExternalStore(subscribeToTheme, getThemeSnapshot, getServerSnapshot);
 
-  useEffect(() => {
-    setMounted(true);
-
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const shouldBeDark = saved === 'dark' || (!saved && prefersDark);
-
-    setIsDark(shouldBeDark);
-
-    if (shouldBeDark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, []);
-
-  const toggle = () => {
-    const next = !isDark;
-    setIsDark(next);
+  const toggle = useCallback(() => {
+    const next = !getThemeSnapshot();
 
     if (next) {
       document.documentElement.classList.add('dark');
@@ -33,10 +35,17 @@ export default function DarkModeButton() {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
-  };
+    window.dispatchEvent(new Event('storage'));
+  }, []);
 
-  if (!mounted) {
+  if (isDark === undefined) {
     return <div className="w-[100px] h-[36px]" />;
+  }
+
+  if (isDark && !document.documentElement.classList.contains('dark')) {
+    document.documentElement.classList.add('dark');
+  } else if (!isDark && document.documentElement.classList.contains('dark')) {
+    document.documentElement.classList.remove('dark');
   }
 
   return (
