@@ -1,5 +1,5 @@
 # 유한비 | 포트폴리오 웹사이트
-URL: https://portfolio-yhb.vercel.app](https://portfolio-yhb.vercel.app/
+URL: https://portfolio-yhb.vercel.app
 
 > 3년차 웹 개발자 유한비의 포트폴리오입니다.
 
